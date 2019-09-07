@@ -18,11 +18,13 @@ from django.urls import path, include
 
 from rest_framework import routers
 
+from attractions.api.viewsets import AttractionsViewSet
 from core.api.viewsets import TouristSpotsViewSet
 
 """Register routers serializer """
 router = routers.DefaultRouter()
 router.register(r'touristsposts', TouristSpotsViewSet)
+router.register(r'attractions', AttractionsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
