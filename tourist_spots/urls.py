@@ -22,12 +22,14 @@ from addresses.api.viewsets import AddressViewSet
 from attractions.api.viewsets import AttractionViewSet
 from comments.api.viewsets import CommentViewSet
 from core.api.viewsets import TouristSpotViewSet
+from evaluations.api.viewsets import EvaluationViewSet
 
 """Register routers serializer """
 router = routers.DefaultRouter()
 router.register(r'addresses', AddressViewSet)
 router.register(r'attractions', AttractionViewSet)
 router.register(r'comments', CommentViewSet)
+router.register(r'evaluations', EvaluationViewSet)
 router.register(r'touristsposts', TouristSpotViewSet)
 
 urlpatterns = [
