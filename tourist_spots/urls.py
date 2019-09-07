@@ -18,15 +18,15 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from addresses.api.viewsets import AddressesViewSet
-from attractions.api.viewsets import AttractionsViewSet
-from core.api.viewsets import TouristSpotsViewSet
+from addresses.api.viewsets import AddressViewSet
+from attractions.api.viewsets import AttractionViewSet
+from core.api.viewsets import TouristSpotViewSet
 
 """Register routers serializer """
 router = routers.DefaultRouter()
-router.register(r'touristsposts', TouristSpotsViewSet)
-router.register(r'attractions', AttractionsViewSet)
-router.register(r'addresses', AddressesViewSet)
+router.register(r'touristsposts', TouristSpotViewSet)
+router.register(r'attractions', AttractionViewSet)
+router.register(r'addresses', AddressViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
