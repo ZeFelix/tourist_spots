@@ -20,13 +20,15 @@ from rest_framework import routers
 
 from addresses.api.viewsets import AddressViewSet
 from attractions.api.viewsets import AttractionViewSet
+from comments.api.viewsets import CommentViewSet
 from core.api.viewsets import TouristSpotViewSet
 
 """Register routers serializer """
 router = routers.DefaultRouter()
-router.register(r'touristsposts', TouristSpotViewSet)
-router.register(r'attractions', AttractionViewSet)
 router.register(r'addresses', AddressViewSet)
+router.register(r'attractions', AttractionViewSet)
+router.register(r'comments', CommentViewSet)
+router.register(r'touristsposts', TouristSpotViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
