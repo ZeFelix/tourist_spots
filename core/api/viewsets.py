@@ -6,5 +6,7 @@ from core.api.serializers import TouristSpotSerializer
 
 
 class TouristSpotViewSet(ModelViewSet):
-    queryset = TouristSpots.objects.all()
     serializer_class = TouristSpotSerializer
+
+    def get_queryset(self):
+        return TouristSpots.objects.filter(approved=True)

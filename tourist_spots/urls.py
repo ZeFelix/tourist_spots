@@ -22,6 +22,7 @@ from addresses.api.viewsets import AddressViewSet
 from attractions.api.viewsets import AttractionViewSet
 from comments.api.viewsets import CommentViewSet
 from core.api.viewsets import TouristSpotViewSet
+from core.models import TouristSpots
 from evaluations.api.viewsets import EvaluationViewSet
 
 """Register routers serializer """
@@ -30,7 +31,7 @@ router.register(r'addresses', AddressViewSet)
 router.register(r'attractions', AttractionViewSet)
 router.register(r'comments', CommentViewSet)
 router.register(r'evaluations', EvaluationViewSet)
-router.register(r'touristsposts', TouristSpotViewSet)
+router.register(r'touristsposts', TouristSpotViewSet, basename=TouristSpots.__name__)
 
 urlpatterns = [
     path('', include(router.urls)),
