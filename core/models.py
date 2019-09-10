@@ -15,6 +15,7 @@ class TouristSpots(models.Model):
     comments = models.ManyToManyField(Comments)
     evaluations = models.ManyToManyField(Evaluations)
     address = models.ForeignKey(Addresses, on_delete=models.CASCADE, blank=True, null=True)
+    picture = models.ImageField('tourist_spots')
 
     def __str__(self):
 

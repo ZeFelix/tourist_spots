@@ -6,4 +6,4 @@ from attractions.models import Attractions
 class AttractionSerializer(ModelSerializer):
     class Meta:
         model = Attractions
-        fields = ['id', 'name', 'description', 'opening_hours', 'minimum_age']
+        fields = ['id', 'name', 'description', 'opening_hours', 'minimum_age', 'picture']
